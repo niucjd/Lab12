@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="@string/moneyNumber"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/moneyText"
+        app:layout_constraintTop_toBottomOf="@+id/total" />
+
+    <TextView
+        android:id="@+id/guessText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="@string/guessText"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/totalText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="@string/totalPoints"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guessText" />
+
+
+    <ImageView
+        android:id="@+id/firstDice"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/firstDice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moneyText"
+        app:srcCompat="@drawable/dice1" />
+
+    <ImageView
+        android:id="@+id/secondDice"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/secondDice"
+        app:layout_constraintStart_toEndOf="@+id/firstDice"
+        app:layout_constraintTop_toBottomOf="@+id/moneyText"
+        app:srcCompat="@drawable/dice1" />
+
+    <ImageView
+        android:id="@+id/thirdDice"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/thirdDice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/money"
+        app:srcCompat="@drawable/dice1" />
+
+    <Button
+        android:id="@+id/smallButton"
+        android:layout_width="125dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/large"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstDice" />
+
+    <Button
+        android:id="@+id/largeButton"
+        android:layout_width="125dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/small"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondDice" />
+
+    <Button
+        android:id="@+id/tripleSeven"
+        android:layout_width="125dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="13dp"
+        android:text="@string/triepleSeven"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/smallButton"
+        app:layout_constraintTop_toBottomOf="@+id/secondDice" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="@string/totalPointsNumber"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/totalText"
+        app:layout_constraintTop_toBottomOf="@+id/guess" />
+
+    <TextView
+        android:id="@+id/guess"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="@string/guessPoint"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/guessText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/moneyText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="@string/money"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalText" />
+
+    <Button
+        android:id="@+id/endButton"
+        android:layout_width="130dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginLeft="143dp"
+        android:layout_marginTop="17dp"
+        android:text="@string/endButton"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tripleSeven" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="10"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/moneyBetText"
+        app:layout_constraintTop_toBottomOf="@+id/money" />
+
+    <TextView
+        android:id="@+id/moneyBetText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="@string/betMoneyText"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moneyText" />
+
+</android.support.constraint.ConstraintLayout>

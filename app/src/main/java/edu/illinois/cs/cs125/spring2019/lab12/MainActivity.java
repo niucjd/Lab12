@@ -1,8 +1,13 @@
 package edu.illinois.cs.cs125.spring2019.lab12;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.wifi.WifiManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -10,9 +15,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.gson.JsonObject;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Formatter;
 
 /**
  * Main class for our UI design lab.
@@ -33,12 +41,16 @@ public final class MainActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Set up the queue for our API requests
+        setContentView(R.layout.activity_setup);
         requestQueue = Volley.newRequestQueue(this);
+        //startAPICall("192.17.96.8");
+        Button startButton = findViewById(R.id.startButton);
+        TextView textview = findViewById(R.id.textView2);
+        startButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, GameActivity.class);
+            startActivity(intent);
+        });
 
-        setContentView(R.layout.activity_main);
-
-        startAPICall("192.17.96.8");
     }
 
     /**
@@ -58,7 +70,8 @@ public final class MainActivity extends AppCompatActivity {
         try {
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                     Request.Method.GET,
-                    "https://ipinfo.io/" + ipAddress + "/json",
+                    //"https://ipinfo.io/" + ipAddress + "/json",
+                    "https://opentdb.com/api.php?amount=1&category=9&difficulty=medium&type=multiple",
                     null,
                     new Response.Listener<JSONObject>() {
                         @Override
@@ -77,6 +90,7 @@ public final class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 
     /**
      * Handle the response from our IP geolocation API.

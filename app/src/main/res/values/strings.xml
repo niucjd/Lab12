@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">Lab 11</string>
+    <string name="guess">guess</string>
+    <string name="totalPoints">The total is :</string>
+    <string name="startButton">start</string>
+    <string name="guessText">Your guess is :</string>
+    <string name="guessPoint">\?</string>
+    <string name="totalPointsNumber">\?</string>
+    <string name="money">Your have $ :</string>
+    <string name="moneyNumber">50</string>
+    <string name="large">small</string>
+    <string name="small">large</string>
+    <string name="firstDice">firstDice</string>
+    <string name="secondDice">secondDice</string>
+    <string name="thirdDice">thirdDice</string>
+    <string name="appTitle">appTitle</string>
+    <string name="triepleSeven">777</string>
+    <string name="endButton">end</string>
+    <string name="resultImage">resultImage</string>
+    <string name="endResultButton">end</string>
+    <string name="betMoneyText">Money you bet :</string>
+    <string name="instructionText">
+        <br>
+            Instruction: guess the total points of three dices.\n
+        </br>
+        <br>
+            small is less or equal to 10 points and large is else.(1:2)\n
+        </br>
+        <br>
+            777 is when three dices have same points.(1:7)\n
+        </br>
+        <br>
+            when loose with 777 it only takes you 2 times of your bet amount\n
+        </br>
+    </string>
+    <string name="Location">unknown</string>
+    <string name="questionText">unknown</string>
+    <string name="answer1">unknown</string>
+    <string name="answer2">unknown</string>
 </resources>
